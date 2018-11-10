@@ -1,0 +1,22 @@
+<seelog>
+    <outputs formatid="main">
+        <filter levels="info,critical,error">
+            <console />
+        </filter>
+        <!--filter levels="debug"-->
+            <!--file path="debug.txt"/-->
+        <!--/filter-->
+        <!--filter levels="error"-->
+            <!--file path="error.txt"/-->
+        <!--/filter-->
+
+        <!--rollingfile formatid="main" type="date" filename="debug.txt" datepattern="2006-01-02T15:04:05Z07:00" /-->
+        <rollingfile formatid="main" type="date" filename="debug.txt" datepattern="2006-01-02 15:04:05" />
+        <!--rollingfile formatid="main" type="date" filename="debug.txt" datepattern="2006-01-02 15" /-->
+
+    </outputs>
+ 
+    <formats>
+        <format id="main" format="%Date/%Time [%LEV] %Msg%n"/>
+    </formats>
+</seelog>

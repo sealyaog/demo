@@ -1,0 +1,22 @@
+<seelog>
+    <outputs formatid="main">
+        <filter levels="info,critical,error">
+            <console />
+        </filter>
+        <filter levels="debug">
+            <file path="debug.txt"/>
+        </filter>
+        <filter levels="error">
+            <file path="error.txt"/>
+        </filter>
+
+        <rollingfile formatid="main" type="size" filename="debug.txt" maxsize="10" maxrolls="2" />
+        <rollingfile formatid="main" type="size" filename="error.txt" maxsize="10" maxrolls="2" />
+
+
+    </outputs>
+ 
+    <formats>
+        <format id="main" format="%Date/%Time [%LEV] %Msg%n"/>
+    </formats>
+</seelog>
